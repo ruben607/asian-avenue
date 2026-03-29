@@ -34,50 +34,47 @@
     </div>
   </nav>
 
-  <!-- Hero: Taste the Tradition -->
-  <section class="hero-landing" id="hero">
-    <div class="hero-landing-inner">
-      <img src="images/logo.svg" alt="Asian Avenue" class="hero-logo">
-      <h1 class="hero-title" data-i18n="hero_headline">Taste the <span class="accent">Tradition</span></h1>
-      <p class="hero-subtitle" data-i18n="hero_text">Discover the finest Asian, African, and Indian groceries at Asian Avenue. Fresh ingredients, bold spices, and everything you need to bring the world's cuisines to your kitchen.</p>
-      <div class="scroll-hint">
-        <span data-i18n="hero_scroll">Scroll to explore</span>
-        <div class="scroll-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+  <!-- ====== STICKY SCROLL HERO ====== -->
+  <!-- The scroll-track is tall to give scroll room. The sticky-frame stays pinned to viewport. -->
+  <div class="scroll-track">
+    <div class="sticky-frame">
+      <!-- Layer 1: Logo (fades out on scroll) -->
+      <div class="hero-logo-layer" id="logoLayer">
+        <img src="images/logo-full.png" alt="Asian Avenue — Taste the Tradition" class="hero-full-logo">
+        <div class="scroll-hint">
+          <span data-i18n="hero_scroll">Scroll to explore</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
         </div>
       </div>
+      <!-- Layer 2: Three panels (fades in on scroll) -->
+      <div class="panels-layer" id="panelsLayer">
+        <a href="products.html#asian" class="panel">
+          <img src="images/asian-food.jpg" alt="The Avenue to Asia">
+          <div class="panel-overlay">
+            <span class="panel-cta" data-i18n="cat_cta">Explore collection
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <a href="products.html#african" class="panel">
+          <img src="images/african-food.jpg" alt="The Avenue to Africa">
+          <div class="panel-overlay">
+            <span class="panel-cta" data-i18n="cat_cta">Explore collection
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <a href="products.html#indian" class="panel">
+          <img src="images/indian-food.jpg" alt="The Avenue to India">
+          <div class="panel-overlay">
+            <span class="panel-cta" data-i18n="cat_cta">Explore collection
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
     </div>
-  </section>
-
-  <!-- Category Panels: Asia / Africa / India -->
-  <section class="panels-section" id="panels">
-    <div class="panels-row">
-      <a href="products.html#asian" class="panel panel--asia">
-        <img src="images/asian-food.jpg" alt="The Avenue to Asia — Asian food products">
-        <div class="panel-hover">
-          <span class="panel-cta" data-i18n="cat_cta">Explore collection
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-        </div>
-      </a>
-      <a href="products.html#african" class="panel panel--africa">
-        <img src="images/african-food.jpg" alt="The Avenue to Africa — African food products">
-        <div class="panel-hover">
-          <span class="panel-cta" data-i18n="cat_cta">Explore collection
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-        </div>
-      </a>
-      <a href="products.html#indian" class="panel panel--india">
-        <img src="images/indian-food.jpg" alt="The Avenue to India — Indian food products">
-        <div class="panel-hover">
-          <span class="panel-cta" data-i18n="cat_cta">Explore collection
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-        </div>
-      </a>
-    </div>
-  </section>
+  </div>
 
   <!-- Intro -->
   <section class="intro" id="about">
