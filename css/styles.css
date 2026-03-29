@@ -1,7 +1,7 @@
 /* ============================================
    ASIAN AVENUE — Brand Stylesheet
    Colors: Burgundy #6d0016 | Gold #ffc800
-   Main background: White
+   Main: White background, scroll-reveal hero
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap');
@@ -51,21 +51,22 @@ ul { list-style: none; }
 
 /* --- Utility --- */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
 .gold { color: var(--burgundy); }
 
-/* --- Navigation --- */
+/* ========================================
+   NAVIGATION — White background
+   ======================================== */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: var(--nav-height);
-  background: var(--burgundy);
-  transition: background var(--transition), box-shadow var(--transition);
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  transition: box-shadow var(--transition);
 }
 .navbar.scrolled {
-  background: rgba(109, 0, 22, 0.97);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 }
 .navbar .container {
   display: flex;
@@ -76,7 +77,6 @@ ul { list-style: none; }
 .nav-logo img {
   height: 52px;
   width: auto;
-  filter: brightness(0) invert(1);
 }
 .nav-links {
   display: flex;
@@ -87,7 +87,7 @@ ul { list-style: none; }
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.85);
+  color: var(--charcoal);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   padding: 0.5rem 0;
@@ -99,12 +99,12 @@ ul { list-style: none; }
   position: absolute;
   bottom: 0; left: 0;
   width: 0; height: 2px;
-  background: var(--gold);
+  background: var(--burgundy);
   transition: width var(--transition);
 }
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--gold);
+  color: var(--burgundy);
 }
 .nav-links a:hover::after,
 .nav-links a.active::after {
@@ -118,12 +118,12 @@ ul { list-style: none; }
   gap: 0.25rem;
   margin-left: 1rem;
   padding-left: 1.5rem;
-  border-left: 1px solid rgba(255,255,255,0.2);
+  border-left: 1px solid var(--gray-200);
 }
 .lang-switcher button {
   background: none;
   border: 1px solid transparent;
-  color: rgba(255,255,255,0.6);
+  color: var(--gray-500);
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 600;
@@ -134,12 +134,12 @@ ul { list-style: none; }
   letter-spacing: 0.05em;
 }
 .lang-switcher button:hover {
-  color: var(--white);
-  border-color: rgba(255,255,255,0.3);
+  color: var(--charcoal);
+  border-color: var(--gray-300);
 }
 .lang-switcher button.active {
-  color: var(--gold);
-  border-color: var(--gold);
+  color: var(--burgundy);
+  border-color: var(--burgundy);
 }
 
 /* Mobile Nav Toggle */
@@ -155,57 +155,135 @@ ul { list-style: none; }
 .nav-toggle span {
   width: 24px;
   height: 2px;
-  background: var(--white);
+  background: var(--charcoal);
   border-radius: 2px;
   transition: all var(--transition);
 }
 
 /* ========================================
-   HERO — FULL-SCREEN THREE PANELS
+   HERO LANDING — "Taste the Tradition"
    ======================================== */
-.hero-panels {
+.hero-landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-height);
+  background: var(--white);
+  position: relative;
+}
+.hero-landing-content {
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+.hero-landing-logo {
+  height: 80px;
+  margin: 0 auto 2.5rem;
+}
+.hero-landing-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+.hero-landing-title .gold {
+  color: var(--burgundy);
+}
+.hero-landing-sub {
+  font-size: 1.1rem;
+  color: var(--gray-500);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 3rem;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gray-500);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+.scroll-arrow {
+  width: 28px;
+  height: 28px;
+  animation: bounceDown 2s ease-in-out infinite;
+}
+.scroll-arrow svg {
+  width: 100%;
+  height: 100%;
+  color: var(--burgundy);
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ========================================
+   CATEGORY PANELS — Scroll Reveal
+   ======================================== */
+.category-panels {
   display: flex;
   width: 100%;
   height: 100vh;
-  padding-top: var(--nav-height);
+  position: relative;
+  overflow: hidden;
 }
-.hero-panel {
+.cat-panel {
   flex: 1;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  /* Scroll reveal animation */
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-.hero-panel img {
+.cat-panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger the panels */
+.cat-panel-africa {
+  transition-delay: 0.15s;
+}
+.cat-panel-india {
+  transition-delay: 0.3s;
+}
+.cat-panel img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-panel:hover img {
+.cat-panel:hover img {
   transform: scale(1.05);
 }
-.hero-panel-overlay {
+.cat-panel-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 40%);
+  background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 40%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding: 2.5rem 1.5rem;
   transition: background var(--transition);
 }
-.hero-panel:hover .hero-panel-overlay {
-  background: linear-gradient(to top, rgba(109,0,22,0.6) 0%, rgba(109,0,22,0.1) 50%);
+.cat-panel:hover .cat-panel-overlay {
+  background: linear-gradient(to top, rgba(109,0,22,0.55) 0%, rgba(109,0,22,0.08) 50%);
 }
-.hero-panel-content {
-  text-align: center;
-  transform: translateY(8px);
-  transition: transform var(--transition);
-}
-.hero-panel:hover .hero-panel-content {
-  transform: translateY(0);
-}
-.hero-panel-cta {
+.cat-panel-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -218,20 +296,20 @@ ul { list-style: none; }
   transform: translateY(10px);
   transition: all var(--transition);
 }
-.hero-panel:hover .hero-panel-cta {
+.cat-panel:hover .cat-panel-cta {
   opacity: 1;
   transform: translateY(0);
 }
-.hero-panel-cta svg {
+.cat-panel-cta svg {
   width: 18px; height: 18px;
   transition: transform var(--transition);
 }
-.hero-panel:hover .hero-panel-cta svg {
+.cat-panel:hover .cat-panel-cta svg {
   transform: translateX(4px);
 }
 
 /* ========================================
-   INTRO SECTION (below hero)
+   INTRO SECTION
    ======================================== */
 .intro {
   padding: 6rem 0;
@@ -249,9 +327,6 @@ ul { list-style: none; }
   line-height: 1.15;
   color: var(--charcoal);
   margin-bottom: 1.25rem;
-}
-.intro-title .gold {
-  color: var(--burgundy);
 }
 .intro-text {
   font-size: 1.1rem;
@@ -352,7 +427,6 @@ ul { list-style: none; }
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(109,0,22,0.15);
 }
-.btn svg { width: 18px; height: 18px; }
 
 /* ========================================
    LOCATIONS PREVIEW
@@ -426,7 +500,7 @@ ul { list-style: none; }
 }
 
 /* ========================================
-   PARTNERS SECTION
+   PARTNERS
    ======================================== */
 .partners {
   padding: 6rem 0;
@@ -482,7 +556,6 @@ ul { list-style: none; }
 .franchise-cta {
   padding: 6rem 0;
   background: var(--cream);
-  position: relative;
 }
 .franchise-cta .container {
   text-align: center;
@@ -552,18 +625,25 @@ ul { list-style: none; }
   margin-left: 0;
   padding-left: 0;
 }
+.footer-bottom .lang-switcher button {
+  color: rgba(255,255,255,0.5);
+}
+.footer-bottom .lang-switcher button:hover {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.3);
+}
+.footer-bottom .lang-switcher button.active {
+  color: var(--gold);
+  border-color: var(--gold);
+}
 
 /* --- Animations --- */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
 
-/* Scroll animations */
+/* Scroll reveal for general sections */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -590,32 +670,36 @@ ul { list-style: none; }
     position: absolute;
     top: var(--nav-height);
     left: 0; right: 0;
-    background: var(--burgundy);
+    background: var(--white);
     padding: 2rem;
     gap: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    border-top: 1px solid var(--gray-200);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
   }
   .nav-links.open .lang-switcher {
     margin-left: 0;
     padding-left: 0;
     border-left: none;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid var(--gray-200);
   }
 
-  /* Hero panels stack vertically on mobile */
-  .hero-panels {
+  .hero-landing-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  /* Panels stack vertically on mobile */
+  .category-panels {
     flex-direction: column;
     height: auto;
     min-height: 100vh;
   }
-  .hero-panel {
+  .cat-panel {
     flex: none;
     height: 33.33vh;
-    min-height: 200px;
+    min-height: 220px;
   }
-  .hero-panel-cta {
+  .cat-panel-cta {
     opacity: 1;
     transform: translateY(0);
   }

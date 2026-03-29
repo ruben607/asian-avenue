@@ -37,38 +37,47 @@
     </div>
   </nav>
 
-  <!-- ========== HERO — THREE FULL-SCREEN CATEGORY PANELS ========== -->
-  <section class="hero-panels">
-    <a href="products.html#asian" class="hero-panel">
-      <img src="images/asian-food.jpg" alt="The Avenue to Asia — Asian food products" loading="eager">
-      <div class="hero-panel-overlay">
-        <div class="hero-panel-content">
-          <span class="hero-panel-cta" data-i18n="cat_cta">Explore collection
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
+  <!-- ========== HERO — TASTE THE TRADITION ========== -->
+  <section class="hero-landing">
+    <div class="hero-landing-content">
+      <img src="images/logo.svg" alt="Asian Avenue" class="hero-landing-logo">
+      <h1 class="hero-landing-title" data-i18n="hero_headline">Taste the <span class="gold">Tradition</span></h1>
+      <p class="hero-landing-sub" data-i18n="hero_text">Discover the finest Asian, African, and Indian groceries at Asian Avenue. Fresh ingredients, bold spices, and everything you need to bring the world's cuisines to your kitchen.</p>
+      <div class="scroll-indicator">
+        <span data-i18n="hero_scroll">Scroll to explore</span>
+        <div class="scroll-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== THREE CATEGORY PANELS (scroll reveal) ========== -->
+  <section class="category-panels" id="categories">
+    <a href="products.html#asian" class="cat-panel cat-panel-asia">
+      <img src="images/asian-food.jpg" alt="The Avenue to Asia — Asian food products">
+      <div class="cat-panel-overlay">
+        <span class="cat-panel-cta" data-i18n="cat_cta">Explore collection
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
       </div>
     </a>
 
-    <a href="products.html#african" class="hero-panel">
-      <img src="images/african-food.jpg" alt="The Avenue to Africa — African food products" loading="eager">
-      <div class="hero-panel-overlay">
-        <div class="hero-panel-content">
-          <span class="hero-panel-cta" data-i18n="cat_cta">Explore collection
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-        </div>
+    <a href="products.html#african" class="cat-panel cat-panel-africa">
+      <img src="images/african-food.jpg" alt="The Avenue to Africa — African food products">
+      <div class="cat-panel-overlay">
+        <span class="cat-panel-cta" data-i18n="cat_cta">Explore collection
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
       </div>
     </a>
 
-    <a href="products.html#indian" class="hero-panel">
-      <img src="images/indian-food.jpg" alt="The Avenue to India — Indian food products" loading="eager">
-      <div class="hero-panel-overlay">
-        <div class="hero-panel-content">
-          <span class="hero-panel-cta" data-i18n="cat_cta">Explore collection
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-        </div>
+    <a href="products.html#indian" class="cat-panel cat-panel-india">
+      <img src="images/indian-food.jpg" alt="The Avenue to India — Indian food products">
+      <div class="cat-panel-overlay">
+        <span class="cat-panel-cta" data-i18n="cat_cta">Explore collection
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
       </div>
     </a>
   </section>
@@ -78,9 +87,9 @@
     <div class="container">
       <div class="intro-content reveal">
         <span class="section-tag" data-i18n="hero_badge">3 Locations across Germany</span>
-        <h1 class="intro-title" data-i18n="hero_title">Your Gateway to <span class="gold">Authentic</span> Flavours</h1>
-        <p class="intro-text" data-i18n="hero_text">
-          Discover the finest Asian, African, and Indian groceries at Asian Avenue. Fresh ingredients, bold spices, and everything you need to bring the world's cuisines to your kitchen.
+        <h2 class="intro-title" data-i18n="intro_title">Your Gateway to <span class="gold">Authentic</span> Flavours</h2>
+        <p class="intro-text" data-i18n="intro_text">
+          From aromatic Asian spices to vibrant African ingredients and rich Indian flavours — Asian Avenue brings the world to your doorstep. Visit one of our three stores across Germany.
         </p>
         <div class="intro-cta">
           <a href="locations.html" class="btn btn-dark" data-i18n="hero_cta_locations">Find a Store</a>

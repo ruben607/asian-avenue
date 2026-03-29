@@ -72,7 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLang);
 });
 
-// --- Scroll Reveal ---
+// --- Scroll Reveal for Category Panels ---
+const catPanels = document.querySelectorAll('.cat-panel');
+const panelObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      panelObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+catPanels.forEach(panel => panelObserver.observe(panel));
+
+// --- Scroll Reveal for General Sections ---
 const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
