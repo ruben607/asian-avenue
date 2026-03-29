@@ -87,7 +87,7 @@
       // Logo: visible at progress 0, gone by progress 0.5
       var logoProgress = Math.min(1, progress * 2);
       logoLayer.style.opacity = 1 - logoProgress;
-      logoLayer.style.transform = 'scale(' + (1 - logoProgress * 0.15) + ')';
+      logoLayer.style.transform = 'scale(' + (1 + logoProgress * 0.3) + ')';
 
       // Panels: hidden at progress 0, fully visible by progress 0.6
       var panelStart = 0.3;
