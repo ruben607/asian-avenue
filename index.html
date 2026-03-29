@@ -10,186 +10,161 @@
 </head>
 <body>
 
-  <!-- ========== NAVIGATION ========== -->
+  <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo" aria-label="Asian Avenue Home">
         <img src="images/logo.svg" alt="Asian Avenue" width="160" height="52">
       </a>
-
       <div class="nav-links">
         <a href="index.html" data-i18n="nav_home">Home</a>
         <a href="locations.html" data-i18n="nav_locations">Locations</a>
         <a href="products.html" data-i18n="nav_products">Products</a>
         <a href="partners.html" data-i18n="nav_partners">Partners</a>
         <a href="franchise.html" data-i18n="nav_franchise">Franchise</a>
-
         <div class="lang-switcher">
           <button data-lang="en" class="active" aria-label="English">EN</button>
           <button data-lang="de" aria-label="Deutsch">DE</button>
           <button data-lang="nl" aria-label="Nederlands">NL</button>
         </div>
       </div>
-
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ========== HERO — TASTE THE TRADITION ========== -->
-  <section class="hero-landing">
-    <div class="hero-landing-content">
-      <img src="images/logo.svg" alt="Asian Avenue" class="hero-landing-logo">
-      <h1 class="hero-landing-title" data-i18n="hero_headline">Taste the <span class="gold">Tradition</span></h1>
-      <p class="hero-landing-sub" data-i18n="hero_text">Discover the finest Asian, African, and Indian groceries at Asian Avenue. Fresh ingredients, bold spices, and everything you need to bring the world's cuisines to your kitchen.</p>
-      <div class="scroll-indicator">
+  <!-- Hero: Taste the Tradition -->
+  <section class="hero-landing" id="hero">
+    <div class="hero-landing-inner">
+      <img src="images/logo.svg" alt="Asian Avenue" class="hero-logo">
+      <h1 class="hero-title" data-i18n="hero_headline">Taste the <span class="accent">Tradition</span></h1>
+      <p class="hero-subtitle" data-i18n="hero_text">Discover the finest Asian, African, and Indian groceries at Asian Avenue. Fresh ingredients, bold spices, and everything you need to bring the world's cuisines to your kitchen.</p>
+      <div class="scroll-hint">
         <span data-i18n="hero_scroll">Scroll to explore</span>
-        <div class="scroll-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        <div class="scroll-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== THREE CATEGORY PANELS (scroll reveal) ========== -->
-  <section class="category-panels" id="categories">
-    <a href="products.html#asian" class="cat-panel cat-panel-asia">
-      <img src="images/asian-food.jpg" alt="The Avenue to Asia — Asian food products">
-      <div class="cat-panel-overlay">
-        <span class="cat-panel-cta" data-i18n="cat_cta">Explore collection
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </span>
-      </div>
-    </a>
-
-    <a href="products.html#african" class="cat-panel cat-panel-africa">
-      <img src="images/african-food.jpg" alt="The Avenue to Africa — African food products">
-      <div class="cat-panel-overlay">
-        <span class="cat-panel-cta" data-i18n="cat_cta">Explore collection
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </span>
-      </div>
-    </a>
-
-    <a href="products.html#indian" class="cat-panel cat-panel-india">
-      <img src="images/indian-food.jpg" alt="The Avenue to India — Indian food products">
-      <div class="cat-panel-overlay">
-        <span class="cat-panel-cta" data-i18n="cat_cta">Explore collection
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </span>
-      </div>
-    </a>
+  <!-- Category Panels: Asia / Africa / India -->
+  <section class="panels-section" id="panels">
+    <div class="panels-row">
+      <a href="products.html#asian" class="panel panel--asia">
+        <img src="images/asian-food.jpg" alt="The Avenue to Asia — Asian food products">
+        <div class="panel-hover">
+          <span class="panel-cta" data-i18n="cat_cta">Explore collection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+      <a href="products.html#african" class="panel panel--africa">
+        <img src="images/african-food.jpg" alt="The Avenue to Africa — African food products">
+        <div class="panel-hover">
+          <span class="panel-cta" data-i18n="cat_cta">Explore collection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+      <a href="products.html#indian" class="panel panel--india">
+        <img src="images/indian-food.jpg" alt="The Avenue to India — Indian food products">
+        <div class="panel-hover">
+          <span class="panel-cta" data-i18n="cat_cta">Explore collection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
   </section>
 
-  <!-- ========== ABOUT / INTRO ========== -->
-  <section class="intro">
+  <!-- Intro -->
+  <section class="intro" id="about">
     <div class="container">
-      <div class="intro-content reveal">
-        <span class="section-tag" data-i18n="hero_badge">3 Locations across Germany</span>
-        <h2 class="intro-title" data-i18n="intro_title">Your Gateway to <span class="gold">Authentic</span> Flavours</h2>
-        <p class="intro-text" data-i18n="intro_text">
-          From aromatic Asian spices to vibrant African ingredients and rich Indian flavours — Asian Avenue brings the world to your doorstep. Visit one of our three stores across Germany.
-        </p>
-        <div class="intro-cta">
+      <div class="intro-inner reveal">
+        <span class="tag" data-i18n="hero_badge">3 Locations across Germany</span>
+        <h2 class="intro-heading" data-i18n="intro_title">Your Gateway to <span class="accent">Authentic</span> Flavours</h2>
+        <p class="intro-body" data-i18n="intro_text">From aromatic Asian spices to vibrant African ingredients and rich Indian flavours — Asian Avenue brings the world to your doorstep. Visit one of our three stores across Germany.</p>
+        <div class="intro-buttons">
           <a href="locations.html" class="btn btn-dark" data-i18n="hero_cta_locations">Find a Store</a>
-          <a href="products.html" class="btn btn-outline-dark" data-i18n="hero_cta_products">Explore Products</a>
+          <a href="products.html" class="btn btn-ghost" data-i18n="hero_cta_products">Explore Products</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== LOCATIONS PREVIEW ========== -->
-  <section class="locations-preview" id="locations">
+  <!-- Locations -->
+  <section class="locations" id="locations">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag" data-i18n="loc_tag">Visit Us</span>
-        <h2 class="section-title" data-i18n="loc_title">Our Stores</h2>
-        <p class="section-subtitle" data-i18n="loc_subtitle">
-          Three locations across Germany, ready to serve you with the finest international groceries.
-        </p>
+      <div class="section-head reveal">
+        <span class="tag" data-i18n="loc_tag">Visit Us</span>
+        <h2 class="section-heading" data-i18n="loc_title">Our Stores</h2>
+        <p class="section-desc" data-i18n="loc_subtitle">Three locations across Germany, ready to serve you with the finest international groceries.</p>
       </div>
-
-      <div class="locations-grid reveal">
-        <div class="location-card">
-          <div class="location-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+      <div class="loc-grid reveal">
+        <div class="loc-card">
+          <div class="loc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <h3 data-i18n="loc_neuss">Neuss</h3>
           <p>Düsseldorfer Str.<br>41460 Neuss, Germany</p>
-          <a href="locations.html" class="btn btn-dark" data-i18n="loc_cta">Get Directions</a>
+          <a href="locations.html" class="btn btn-dark btn-sm" data-i18n="loc_cta">Get Directions</a>
         </div>
-
-        <div class="location-card">
-          <div class="location-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+        <div class="loc-card">
+          <div class="loc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <h3 data-i18n="loc_ludwigshafen">Ludwigshafen</h3>
           <p>Prinzregentenstraße<br>67063 Ludwigshafen, Germany</p>
-          <a href="locations.html" class="btn btn-dark" data-i18n="loc_cta">Get Directions</a>
+          <a href="locations.html" class="btn btn-dark btn-sm" data-i18n="loc_cta">Get Directions</a>
         </div>
-
-        <div class="location-card">
-          <div class="location-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+        <div class="loc-card">
+          <div class="loc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <h3 data-i18n="loc_mainz">Mainz</h3>
           <p>Boppstraße<br>55118 Mainz, Germany</p>
-          <a href="locations.html" class="btn btn-dark" data-i18n="loc_cta">Get Directions</a>
+          <a href="locations.html" class="btn btn-dark btn-sm" data-i18n="loc_cta">Get Directions</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PARTNERS ========== -->
+  <!-- Partners -->
   <section class="partners" id="partners">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag" data-i18n="partner_tag">Can't Visit?</span>
-        <h2 class="section-title" data-i18n="partner_title">Shop Online Through Our Partners</h2>
-        <p class="section-subtitle" data-i18n="partner_subtitle">
-          Not near one of our stores? Our trusted partner shops carry our products and deliver to your door.
-        </p>
+      <div class="section-head reveal">
+        <span class="tag" data-i18n="partner_tag">Can't Visit?</span>
+        <h2 class="section-heading" data-i18n="partner_title">Shop Online Through Our Partners</h2>
+        <p class="section-desc" data-i18n="partner_subtitle">Not near one of our stores? Our trusted partner shops carry our products and deliver to your door.</p>
       </div>
-
-      <div class="partners-grid reveal">
+      <div class="partner-grid reveal">
         <div class="partner-card">
           <h3 data-i18n="partner_jj_title">JJ Maveli</h3>
           <p data-i18n="partner_jj_text">A trusted online destination for authentic South Asian groceries. Browse our selection on their platform and get your favourite products delivered.</p>
-          <a href="partners.html" class="btn btn-outline" data-i18n="partner_cta">Visit Store</a>
+          <a href="partners.html" class="btn btn-outline-gold" data-i18n="partner_cta">Visit Store</a>
         </div>
-
         <div class="partner-card">
           <h3 data-i18n="partner_ab_title">Asian Bazar</h3>
           <p data-i18n="partner_ab_text">Your go-to marketplace for Asian and international food products. Find Asian Avenue products alongside a wide range of grocery essentials.</p>
-          <a href="partners.html" class="btn btn-outline" data-i18n="partner_cta">Visit Store</a>
+          <a href="partners.html" class="btn btn-outline-gold" data-i18n="partner_cta">Visit Store</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FRANCHISE CTA ========== -->
-  <section class="franchise-cta">
+  <!-- Franchise -->
+  <section class="franchise" id="franchise">
     <div class="container reveal">
       <h2 data-i18n="franchise_title">Interested in Opening an Asian Avenue?</h2>
-      <p data-i18n="franchise_text">
-        We're expanding across Europe. If you're passionate about bringing authentic international groceries to your community, we'd love to hear from you.
-      </p>
-      <a href="franchise.html" class="btn btn-primary" data-i18n="franchise_cta">Get in Touch</a>
+      <p data-i18n="franchise_text">We're expanding across Europe. If you're passionate about bringing authentic international groceries to your community, we'd love to hear from you.</p>
+      <a href="franchise.html" class="btn btn-gold" data-i18n="franchise_cta">Get in Touch</a>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-cols">
         <div class="footer-brand">
           <img src="images/logo.svg" alt="Asian Avenue">
-          <p data-i18n="footer_desc">
-            Bringing the finest Asian, African, and Indian groceries to Germany since day one. Three locations, one mission: authentic flavours for everyone.
-          </p>
+          <p data-i18n="footer_desc">Bringing the finest Asian, African, and Indian groceries to Germany since day one. Three locations, one mission: authentic flavours for everyone.</p>
         </div>
-
         <div>
           <h4 data-i18n="footer_pages">Pages</h4>
           <ul>
@@ -199,7 +174,6 @@
             <li><a href="franchise.html" data-i18n="nav_franchise">Franchise</a></li>
           </ul>
         </div>
-
         <div>
           <h4 data-i18n="footer_locations">Locations</h4>
           <ul>
@@ -208,7 +182,6 @@
             <li><a href="locations.html">Mainz</a></li>
           </ul>
         </div>
-
         <div>
           <h4 data-i18n="footer_contact">Contact</h4>
           <ul>
@@ -217,9 +190,8 @@
           </ul>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <span data-i18n="footer_copyright">© 2026 Asian Avenue. All rights reserved.</span>
+      <div class="footer-bar">
+        <span data-i18n="footer_copyright">&copy; 2026 Asian Avenue. All rights reserved.</span>
         <div class="lang-switcher">
           <button data-lang="en" class="active" aria-label="English">EN</button>
           <button data-lang="de" aria-label="Deutsch">DE</button>

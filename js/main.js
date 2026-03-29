@@ -1,108 +1,106 @@
 /* ============================================
-   ASIAN AVENUE — Main JavaScript
+   ASIAN AVENUE v2 — JavaScript
+   Scroll-triggered panels, nav, i18n
+   Updated: 2026-03-29
    ============================================ */
 
-// --- Navbar Scroll Effect ---
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
-});
+(function () {
+  'use strict';
 
-// --- Mobile Nav Toggle ---
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    const spans = navToggle.querySelectorAll('span');
-    if (navLinks.classList.contains('open')) {
-      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-    } else {
-      spans[0].style.transform = '';
-      spans[1].style.opacity = '';
-      spans[2].style.transform = '';
-    }
+  // ── Navbar scroll shadow ──
+  var nav = document.querySelector('.navbar');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
   });
-}
 
-// --- Language Switcher ---
-const translations = {};
-let currentLang = localStorage.getItem('aa-lang') || 'en';
+  // ── Mobile toggle ──
+  var toggle = document.querySelector('.nav-toggle');
+  var links = document.querySelector('.nav-links');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      links.classList.toggle('open');
+      var bars = toggle.querySelectorAll('span');
+      var isOpen = links.classList.contains('open');
+      bars[0].style.transform = isOpen ? 'rotate(45deg) translate(5px,5px)' : '';
+      bars[1].style.opacity = isOpen ? '0' : '';
+      bars[2].style.transform = isOpen ? 'rotate(-45deg) translate(5px,-5px)' : '';
+    });
+  }
 
-async function loadLanguage(lang) {
-  if (!translations[lang]) {
-    try {
-      const res = await fetch(`lang/${lang}.json`);
-      translations[lang] = await res.json();
-    } catch (e) {
-      console.warn(`Could not load language: ${lang}`);
+  // ── Language switcher ──
+  var cache = {};
+  var lang = localStorage.getItem('aa-lang') || 'en';
+
+  function apply(data) {
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.dataset.i18n;
+      if (!data[k]) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = data[k];
+      } else {
+        el.innerHTML = data[k];
+      }
+    });
+  }
+
+  function load(code) {
+    if (cache[code]) {
+      apply(cache[code]);
+      finish(code);
       return;
     }
+    fetch('lang/' + code + '.json')
+      .then(function (r) { return r.json(); })
+      .then(function (d) { cache[code] = d; apply(d); finish(code); })
+      .catch(function () { console.warn('Lang file not found: ' + code); });
   }
-  applyTranslations(translations[lang]);
-  currentLang = lang;
-  localStorage.setItem('aa-lang', lang);
-  document.querySelectorAll('.lang-switcher button').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-  document.documentElement.lang = lang;
-}
 
-function applyTranslations(data) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.dataset.i18n;
-    if (data[key]) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = data[key];
-      } else {
-        el.innerHTML = data[key];
+  function finish(code) {
+    lang = code;
+    localStorage.setItem('aa-lang', code);
+    document.documentElement.lang = code;
+    document.querySelectorAll('.lang-switcher button').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.lang === code);
+    });
+  }
+
+  document.querySelectorAll('.lang-switcher button').forEach(function (b) {
+    b.addEventListener('click', function () { load(b.dataset.lang); });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () { load(lang); });
+
+  // ── Scroll-triggered panel fade-in ──
+  var panels = document.querySelectorAll('.panel');
+  var panelObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        panelObs.unobserve(e.target);
       }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  panels.forEach(function (p) { panelObs.observe(p); });
+
+  // ── General reveal ──
+  var reveals = document.querySelectorAll('.reveal');
+  var revObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function (el) { revObs.observe(el); });
+
+  // ── Active nav link ──
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (href === page || (page === '' && href === 'index.html')) {
+      a.classList.add('active');
     }
   });
-}
 
-document.querySelectorAll('.lang-switcher button').forEach(btn => {
-  btn.addEventListener('click', () => loadLanguage(btn.dataset.lang));
-});
-
-// Init language
-document.addEventListener('DOMContentLoaded', () => {
-  loadLanguage(currentLang);
-});
-
-// --- Scroll Reveal for Category Panels ---
-const catPanels = document.querySelectorAll('.cat-panel');
-const panelObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      panelObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-
-catPanels.forEach(panel => panelObserver.observe(panel));
-
-// --- Scroll Reveal for General Sections ---
-const revealElements = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-revealElements.forEach(el => revealObserver.observe(el));
-
-// --- Active Nav Link ---
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(link => {
-  const href = link.getAttribute('href');
-  if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-    link.classList.add('active');
-  }
-});
+})();

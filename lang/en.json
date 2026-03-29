@@ -4,13 +4,13 @@
   "nav_products": "Products",
   "nav_partners": "Partners",
   "nav_franchise": "Franchise",
-  "hero_headline": "Taste the <span class='gold'>Tradition</span>",
+  "hero_headline": "Taste the <span class='accent'>Tradition</span>",
   "hero_text": "Discover the finest Asian, African, and Indian groceries at Asian Avenue. Fresh ingredients, bold spices, and everything you need to bring the world's cuisines to your kitchen.",
   "hero_scroll": "Scroll to explore",
   "hero_badge": "3 Locations across Germany",
   "hero_cta_locations": "Find a Store",
   "hero_cta_products": "Explore Products",
-  "intro_title": "Your Gateway to <span class='gold'>Authentic</span> Flavours",
+  "intro_title": "Your Gateway to <span class='accent'>Authentic</span> Flavours",
   "intro_text": "From aromatic Asian spices to vibrant African ingredients and rich Indian flavours — Asian Avenue brings the world to your doorstep. Visit one of our three stores across Germany.",
   "cat_cta": "Explore collection",
   "loc_tag": "Visit Us",
@@ -35,5 +35,5 @@
   "footer_pages": "Pages",
   "footer_locations": "Locations",
   "footer_contact": "Contact",
-  "footer_copyright": "© 2026 Asian Avenue. All rights reserved."
+  "footer_copyright": "\u00a9 2026 Asian Avenue. All rights reserved."
 }
