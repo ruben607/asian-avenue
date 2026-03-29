@@ -1,0 +1,48 @@
+{
+  "nav_home": "Home",
+  "nav_locations": "Locaties",
+  "nav_products": "Producten",
+  "nav_partners": "Partners",
+  "nav_franchise": "Franchise",
+
+  "hero_badge": "3 Locaties in Duitsland",
+  "hero_title": "Jouw toegang tot <span class=\"gold\">authentieke</span> smaken",
+  "hero_text": "Ontdek de beste Aziatische, Afrikaanse en Indiase boodschappen bij Asian Avenue. Verse ingrediënten, pittige kruiden en alles wat je nodig hebt om de keukens van de wereld naar jouw keuken te brengen.",
+  "hero_cta_locations": "Winkel vinden",
+  "hero_cta_products": "Producten bekijken",
+
+  "cat_tag": "Onze wereld van smaken",
+  "cat_title": "Ontdek per keuken",
+  "cat_subtitle": "Van aromatische Aziatische kruiden tot levendige Afrikaanse ingrediënten en rijke Indiase smaken — wij brengen de wereld naar jouw deur.",
+  "cat_asian": "Aziatische Producten",
+  "cat_african": "Afrikaanse Producten",
+  "cat_indian": "Indiase Producten",
+  "cat_cta": "Collectie bekijken",
+
+  "loc_tag": "Bezoek ons",
+  "loc_title": "Onze Winkels",
+  "loc_subtitle": "Drie locaties in Duitsland, klaar om je te voorzien van de beste internationale boodschappen.",
+  "loc_neuss": "Neuss",
+  "loc_ludwigshafen": "Ludwigshafen",
+  "loc_mainz": "Mainz",
+  "loc_cta": "Route plannen",
+
+  "partner_tag": "Geen winkel in de buurt?",
+  "partner_title": "Online winkelen bij onze partners",
+  "partner_subtitle": "Niet in de buurt van een van onze winkels? Onze betrouwbare partnershops voeren onze producten en leveren aan huis.",
+  "partner_jj_title": "JJ Maveli",
+  "partner_jj_text": "Een betrouwbare online bestemming voor authentieke Zuid-Aziatische boodschappen. Bekijk onze selectie op hun platform en laat je favoriete producten bezorgen.",
+  "partner_ab_title": "Asian Bazar",
+  "partner_ab_text": "Jouw marktplaats voor Aziatische en internationale voedingsproducten. Vind Asian Avenue producten naast een breed assortiment boodschappen.",
+  "partner_cta": "Winkel bezoeken",
+
+  "franchise_title": "Interesse in het openen van een Asian Avenue?",
+  "franchise_text": "We breiden uit over heel Europa. Als je gepassioneerd bent over het brengen van authentieke internationale boodschappen naar jouw gemeenschap, horen we graag van je.",
+  "franchise_cta": "Neem contact op",
+
+  "footer_desc": "Wij brengen de beste Aziatische, Afrikaanse en Indiase boodschappen naar Duitsland. Drie locaties, één missie: authentieke smaken voor iedereen.",
+  "footer_pages": "Pagina's",
+  "footer_locations": "Locaties",
+  "footer_contact": "Contact",
+  "footer_copyright": "© 2026 Asian Avenue. Alle rechten voorbehouden."
+}

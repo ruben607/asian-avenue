@@ -1,0 +1,48 @@
+{
+  "nav_home": "Home",
+  "nav_locations": "Locations",
+  "nav_products": "Products",
+  "nav_partners": "Partners",
+  "nav_franchise": "Franchise",
+
+  "hero_badge": "3 Locations across Germany",
+  "hero_title": "Your Gateway to <span class=\"gold\">Authentic</span> Flavours",
+  "hero_text": "Discover the finest Asian, African, and Indian groceries at Asian Avenue. Fresh ingredients, bold spices, and everything you need to bring the world's cuisines to your kitchen.",
+  "hero_cta_locations": "Find a Store",
+  "hero_cta_products": "Explore Products",
+
+  "cat_tag": "Our World of Flavours",
+  "cat_title": "Explore by Cuisine",
+  "cat_subtitle": "From aromatic Asian spices to vibrant African ingredients and rich Indian flavours — we bring the world to your doorstep.",
+  "cat_asian": "Asian Products",
+  "cat_african": "African Products",
+  "cat_indian": "Indian Products",
+  "cat_cta": "Explore collection",
+
+  "loc_tag": "Visit Us",
+  "loc_title": "Our Stores",
+  "loc_subtitle": "Three locations across Germany, ready to serve you with the finest international groceries.",
+  "loc_neuss": "Neuss",
+  "loc_ludwigshafen": "Ludwigshafen",
+  "loc_mainz": "Mainz",
+  "loc_cta": "Get Directions",
+
+  "partner_tag": "Can't Visit?",
+  "partner_title": "Shop Online Through Our Partners",
+  "partner_subtitle": "Not near one of our stores? Our trusted partner shops carry our products and deliver to your door.",
+  "partner_jj_title": "JJ Maveli",
+  "partner_jj_text": "A trusted online destination for authentic South Asian groceries. Browse our selection on their platform and get your favourite products delivered.",
+  "partner_ab_title": "Asian Bazar",
+  "partner_ab_text": "Your go-to marketplace for Asian and international food products. Find Asian Avenue products alongside a wide range of grocery essentials.",
+  "partner_cta": "Visit Store",
+
+  "franchise_title": "Interested in Opening an Asian Avenue?",
+  "franchise_text": "We're expanding across Europe. If you're passionate about bringing authentic international groceries to your community, we'd love to hear from you.",
+  "franchise_cta": "Get in Touch",
+
+  "footer_desc": "Bringing the finest Asian, African, and Indian groceries to Germany since day one. Three locations, one mission: authentic flavours for everyone.",
+  "footer_pages": "Pages",
+  "footer_locations": "Locations",
+  "footer_contact": "Contact",
+  "footer_copyright": "© 2026 Asian Avenue. All rights reserved."
+}
