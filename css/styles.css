@@ -392,8 +392,8 @@ ul { list-style: none }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: var(--white); padding: 2rem; gap: 1rem; border-top: 1px solid var(--g200); box-shadow: 0 12px 40px rgba(0,0,0,.1) }
   .nav-links.open .lang-switcher { margin-left: 0; padding-left: 0; border-left: none; padding-top: 1rem; border-top: 1px solid var(--g200) }
   .hero-full-logo { max-width: 300px }
-  .panels-layer { flex-direction: column }
-  .panel { flex: none; min-height: 33.33vh }
+  .panels-layer { flex-direction: row }
+  .panel { flex: 1; min-height: auto }
   .panel-cta { opacity: 1; transform: translateY(0) }
   .partner-detail-card { flex-direction: column; padding: 2rem }
   .why-grid { grid-template-columns: 1fr }
