@@ -73,6 +73,7 @@
   var scrollTrack = document.querySelector('.scroll-track');
   var logoLayer = document.getElementById('logoLayer');
   var panelsLayer = document.getElementById('panelsLayer');
+  var navLogoScroll = document.querySelector('.nav-logo-scroll');
 
   if (scrollTrack && logoLayer && panelsLayer) {
     function onScroll() {
@@ -84,19 +85,28 @@
       var scrolled = -rect.top / (trackHeight - viewH);
       var progress = Math.max(0, Math.min(1, scrolled));
 
-      // Logo: visible at progress 0, gone by progress 0.5
-      var logoProgress = Math.min(1, progress * 2);
+      // Logo: visible at progress 0, fully gone by progress 0.4 (tighter)
+      var logoProgress = Math.min(1, progress * 2.5);
       logoLayer.style.opacity = 1 - logoProgress;
       logoLayer.style.transform = 'scale(' + (1 + logoProgress * 0.3) + ')';
 
-      // Panels: hidden at progress 0, fully visible by progress 0.6
-      var panelStart = 0.3;
-      var panelProgress = Math.max(0, Math.min(1, (progress - panelStart) / 0.5));
+      // Panels: hidden at progress 0, fully visible by progress 0.7 (starts later)
+      var panelStart = 0.45;
+      var panelProgress = Math.max(0, Math.min(1, (progress - panelStart) / 0.4));
       panelsLayer.style.opacity = panelProgress;
 
       // Hide pointer events when not visible
       logoLayer.style.pointerEvents = logoProgress > 0.95 ? 'none' : 'auto';
       panelsLayer.style.pointerEvents = panelProgress > 0.5 ? 'auto' : 'none';
+
+      // M-1: Reveal navbar logo once scrolled fully past hero
+      if (navLogoScroll) {
+        if (progress >= 0.99) {
+          navLogoScroll.classList.add('revealed');
+        } else {
+          navLogoScroll.classList.remove('revealed');
+        }
+      }
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
