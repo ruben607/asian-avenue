@@ -6,7 +6,7 @@
   <title>Franchise & Contact — Asian Avenue</title>
   <meta name="description" content="Interested in opening an Asian Avenue store? Get in touch with us. We're expanding across Europe.">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/elephant.png" type="image/png">
 </head>
 <body>
 
@@ -14,7 +14,8 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo" aria-label="Asian Avenue Home">
-        <img src="images/logo.svg" alt="Asian Avenue" width="160" height="52">
+        <img src="images/elephant.png" alt="Asian Avenue" width="52" height="52" style="height:52px;width:auto">
+        
       </a>
       <div class="nav-links">
         <a href="index.html" data-i18n="nav_home">Home</a>
@@ -38,7 +39,7 @@
   <section class="page-header">
     <div class="container">
       <span class="tag" data-i18n="franchise_tag">Join Us</span>
-      <h1 class="page-title" data-i18n="franchise_page_title">Open an Asian Avenue</h1>
+      <h1 class="page-title" data-i18n="franchise_page_title">Apply for a Franchise</h1>
       <p class="page-desc" data-i18n="franchise_page_desc">We're expanding across Europe. If you're passionate about bringing authentic international groceries to your community, we'd love to hear from you.</p>
     </div>
   </section>
@@ -77,12 +78,12 @@
     <div class="container">
       <div class="contact-wrapper reveal">
         <div class="contact-info">
-          <h2 data-i18n="contact_title">Get in Touch</h2>
+          <h2 data-i18n="contact_title">Apply for a Franchise</h2>
           <p data-i18n="contact_desc">Fill out the form and our team will get back to you within 48 hours. We're excited to hear about your plans.</p>
           <div class="contact-details">
             <div class="contact-detail-item">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              <span>info@asianavenue.de</span>
+              <span>info@asian-ave.com</span>
             </div>
             <div class="contact-detail-item">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -112,7 +113,7 @@
           </div>
           <div class="form-group">
             <label for="message" data-i18n="form_message">Message</label>
-            <textarea id="message" name="message" rows="5" data-i18n="form_message_placeholder" placeholder="Tell us about your interest in opening an Asian Avenue store..."></textarea>
+            <textarea id="message" name="message" rows="5" required data-i18n="form_message_placeholder" placeholder="Tell us about your interest in opening an Asian Avenue store..."></textarea>
           </div>
           <button type="submit" class="btn btn-dark btn-full" data-i18n="form_submit">Send Message</button>
           <p class="form-note" data-i18n="form_note">We'll respond within 48 hours. Your information is kept private and secure.</p>
@@ -126,8 +127,8 @@
     <div class="container">
       <div class="footer-cols">
         <div class="footer-brand">
-          <img src="images/logo.svg" alt="Asian Avenue">
-          <p data-i18n="footer_desc">Bringing the finest Asian, African, and Indian groceries to Germany since day one. Three locations, one mission: authentic flavours for everyone.</p>
+          <img src="images/elephant.png" alt="Asian Avenue" style="height:44px;width:auto;filter:brightness(0) invert(1)">
+          <p data-i18n="footer_desc">Bringing the finest Asian, African, and Indian groceries to Europe since day one. Three locations, one mission: authentic flavours for everyone.</p>
         </div>
         <div>
           <h4 data-i18n="footer_pages">Pages</h4>
@@ -149,13 +150,14 @@
         <div>
           <h4 data-i18n="footer_contact">Contact</h4>
           <ul>
-            <li><a href="franchise.html">info@asianavenue.de</a></li>
+            <li><a href="mailto:info@asian-ave.com">info@asian-ave.com</a></li>
             <li><a href="franchise.html" data-i18n="franchise_cta">Get in Touch</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bar">
-        <span data-i18n="footer_copyright">&copy; 2026 Asian Avenue. All rights reserved.</span>
+      <div class="footer-bar" style="flex-wrap:wrap;gap:.5rem">
+        <span data-i18n="footer_copyright">&copy; <script>document.write(new Date().getFullYear())</script> Asian Avenue. All rights reserved.</span>
+        <a href="terms.html" style="color:rgba(255,255,255,.5);font-size:.82rem;transition:color .3s">Terms &amp; Conditions</a>
         <div class="lang-switcher">
           <button data-lang="en" class="active" aria-label="English">EN</button>
           <button data-lang="de" aria-label="Deutsch">DE</button>

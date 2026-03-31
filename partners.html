@@ -6,7 +6,7 @@
   <title>Our Partners — Asian Avenue</title>
   <meta name="description" content="Shop Asian Avenue products online through our trusted partners JJ Maveli and Asian Bazar.">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="images/elephant.png" type="image/png">
 </head>
 <body>
 
@@ -14,7 +14,8 @@
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
       <a href="index.html" class="nav-logo" aria-label="Asian Avenue Home">
-        <img src="images/logo.svg" alt="Asian Avenue" width="160" height="52">
+        <img src="images/elephant.png" alt="Asian Avenue" width="52" height="52" style="height:52px;width:auto">
+        
       </a>
       <div class="nav-links">
         <a href="index.html" data-i18n="nav_home">Home</a>
@@ -49,8 +50,8 @@
 
       <!-- JJ Maveli -->
       <div class="partner-detail-card reveal">
-        <div class="partner-detail-icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>
+        <div class="partner-detail-icon partner-logo-wrap">
+          <img src="images/jjmaveli-logo.jpeg" alt="JJ Maveli Store" class="partner-logo-img">
         </div>
         <div class="partner-detail-content">
           <h2 data-i18n="partner_jj_title">JJ Maveli</h2>
@@ -69,14 +70,14 @@
               <span data-i18n="partner_feature_authentic">Authentic products guaranteed</span>
             </div>
           </div>
-          <a href="#" target="_blank" rel="noopener" class="btn btn-dark" data-i18n="partner_visit_shop">Visit JJ Maveli</a>
+          <a href="https://jjmavelistore.com" target="_blank" rel="noopener" class="btn btn-dark" data-i18n="partner_visit_shop">Visit JJ Maveli</a>
         </div>
       </div>
 
       <!-- Asian Bazar -->
       <div class="partner-detail-card reveal">
-        <div class="partner-detail-icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>
+        <div class="partner-detail-icon partner-logo-wrap">
+          <img src="images/asianbazar-logo.jpeg" alt="Asian Bazar" class="partner-logo-img">
         </div>
         <div class="partner-detail-content">
           <h2 data-i18n="partner_ab_title">Asian Bazar</h2>
@@ -95,7 +96,7 @@
               <span data-i18n="partner_feature_international">International shipping</span>
             </div>
           </div>
-          <a href="#" target="_blank" rel="noopener" class="btn btn-dark" data-i18n="partner_visit_shop_ab">Visit Asian Bazar</a>
+          <a href="https://asianbazar.de" target="_blank" rel="noopener" class="btn btn-dark" data-i18n="partner_visit_shop_ab">Visit Asian Bazar</a>
         </div>
       </div>
 
@@ -116,8 +117,8 @@
     <div class="container">
       <div class="footer-cols">
         <div class="footer-brand">
-          <img src="images/logo.svg" alt="Asian Avenue">
-          <p data-i18n="footer_desc">Bringing the finest Asian, African, and Indian groceries to Germany since day one. Three locations, one mission: authentic flavours for everyone.</p>
+          <img src="images/elephant.png" alt="Asian Avenue" style="height:44px;width:auto;filter:brightness(0) invert(1)">
+          <p data-i18n="footer_desc">Bringing the finest Asian, African, and Indian groceries to Europe since day one. Three locations, one mission: authentic flavours for everyone.</p>
         </div>
         <div>
           <h4 data-i18n="footer_pages">Pages</h4>
@@ -139,13 +140,14 @@
         <div>
           <h4 data-i18n="footer_contact">Contact</h4>
           <ul>
-            <li><a href="franchise.html">info@asianavenue.de</a></li>
+            <li><a href="mailto:info@asian-ave.com">info@asian-ave.com</a></li>
             <li><a href="franchise.html" data-i18n="franchise_cta">Get in Touch</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bar">
-        <span data-i18n="footer_copyright">&copy; 2026 Asian Avenue. All rights reserved.</span>
+      <div class="footer-bar" style="flex-wrap:wrap;gap:.5rem">
+        <span data-i18n="footer_copyright">&copy; <script>document.write(new Date().getFullYear())</script> Asian Avenue. All rights reserved.</span>
+        <a href="terms.html" style="color:rgba(255,255,255,.5);font-size:.82rem;transition:color .3s">Terms &amp; Conditions</a>
         <div class="lang-switcher">
           <button data-lang="en" class="active" aria-label="English">EN</button>
           <button data-lang="de" aria-label="Deutsch">DE</button>
